@@ -1,0 +1,40 @@
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid black;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+tr:hover {background-color: #D6EEEE;}
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+thead th:nth-child(1) {
+  width: 20%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 20%;
+}
+
+thead th:nth-child(4) {
+  width: 20%;
+}
+
+thead th:nth-child(5) {
+  width: 20%;
+}
+th,
+td {
+  padding: 5px;
+}
+
+
