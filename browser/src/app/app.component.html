@@ -1,0 +1,54 @@
+<div class="button-container">
+    <button class="update-button" type="button" (click)="updateBtnClicked()">Update application</button>
+    <button class="update-button" type="button" (click)="forceElectricityPriceUpdateClicked()">Force update electricity prices</button>
+</div>
+
+<div *ngIf="electricityPriceChart.chartDataPoints.length">
+    <span class="last-update-span">Last update {{formatLastUpdate(electricityPriceChart.lastUpdate)}}</span>
+    <app-chart
+        [data]="electricityPriceChart.chartDataPoints"
+        [title]="electricityPriceChart.chartTitle"
+        [yAxisLabel]="electricityPriceChart.yAxisTitle"
+        [eletricity]="true">
+    </app-chart>
+</div>
+
+<div *ngIf="consumptionChart.chartDataPoints.length">
+    <span class="last-update-span">Last update {{formatLastUpdate(consumptionChart.lastUpdate)}}</span>
+    <app-chart
+        [data]="consumptionChart.chartDataPoints"
+        [title]="consumptionChart.chartTitle"
+        [yAxisLabel]="consumptionChart.yAxisTitle"
+        [eletricity]="false">
+    </app-chart>
+</div>
+
+<div *ngIf="temperatureInChart.chartDataPoints.length">
+    <span class="last-update-span">Last update {{formatLastUpdate(temperatureInChart.lastUpdate)}}</span>
+    <app-chart 
+        [data]="temperatureInChart.chartDataPoints"
+        [title]="temperatureInChart.chartTitle"
+        [yAxisLabel]="temperatureInChart.yAxisTitle"
+        [eletricity]="false">
+    </app-chart>
+</div>
+
+<div *ngIf="temperatureOutChart.chartDataPoints.length">
+    <span class="last-update-span">Last update {{formatLastUpdate(temperatureOutChart.lastUpdate)}}</span>
+    <app-chart 
+        [data]="temperatureOutChart.chartDataPoints"
+        [title]="temperatureOutChart.chartTitle"
+        [yAxisLabel]="temperatureOutChart.yAxisTitle"
+        [eletricity]="false">
+    </app-chart>
+</div>
+
+<div *ngIf="temperatureSetChart.chartDataPoints.length">
+    <span class="last-update-span">Last update {{formatLastUpdate(temperatureSetChart.lastUpdate)}}</span>
+    <app-chart 
+        [data]="temperatureSetChart.chartDataPoints"
+        [title]="temperatureSetChart.chartTitle"
+        [yAxisLabel]="temperatureSetChart.yAxisTitle"
+        [eletricity]="false">
+    </app-chart>
+</div>

@@ -1,0 +1,14 @@
+/.idea
+/__pycache__
+/venv
+/geckodriver.log
+/test.py
+*.txt
+*.csv
+*.log
+*.pyc
+current_price_data.json
+*.db
+server/static/*
+server/templates/*
+.vscode
